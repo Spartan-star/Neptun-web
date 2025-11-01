@@ -1,0 +1,215 @@
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background-color: #CFE9ED; color: #111; }
+
+/* Headings */
+h1 { font-size: 48px; text-align: center; margin: 20px 10px 0; }
+h2 { font-size: 28px; text-align: center; margin: 20px 0 10px; }
+h3 { font-size: 22px; text-align: center; margin: 16px 0 8px; }
+h4 { font-size: 18px; text-align: center; margin: 12px 0 6px; }
+
+/* Menu */
+header { background:#282425; }
+.menu { list-style:none; padding:0; margin:0; text-align:center; }
+.menu li { display:inline-block; }
+.menu a { display:inline-block; padding:16px 28px; color:#fff; text-decoration:none; }
+.menu a:hover, .menu a:focus { background:#756158; }
+/* ===== HORNÍ MENU ===== */
+
+header {
+  background: #282425;
+  position: sticky;   /* přilepené při scrollu */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 16px 28px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease;
+}
+
+.menu a:hover, 
+.menu a:focus {
+  background: #756158;
+}
+
+/* Menu na mobilu */
+@media screen and (max-width: 768px) {
+  .menu li {
+    display: block;
+  }
+  .menu a {
+    display: block;
+    border-bottom: 1px solid #3b3637;
+  }
+}
+
+/* Hero */
+.hero-image { width:100%; height:auto; display:block; max-height:70vh; object-fit:cover; }
+
+/* Footer */
+.paticka { background:#000; color:#fff; text-align:center; padding:16px; margin-top:40px; }
+
+/* O nás */
+.onas-wrap { max-width:1100px; margin: 0 auto; padding: 20px; }
+.onas-fotky { display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start; }
+.onas-fotky img { width:100%; height:auto; border-radius:10px; display:block; }
+.onas-text { max-width: 900px; margin: 0 auto; line-height:1.7; font-size: 18px; text-align: center; }
+
+/* Galerie */
+.galerie { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:12px; padding:16px; max-width:1200px; margin:0 auto; }
+.galerie img { width:100%; height:auto; border-radius:8px; display:block; object-fit:cover; }
+
+/* Tabulky (Lístek) */
+.tabulky-kontejner { display:flex; flex-wrap:wrap; gap:20px; padding:16px; max-width:1200px; margin:0 auto; }
+.table-wrapper { flex:1 1 520px; overflow-x:auto; background:#fff; border-radius:10px; padding:10px; }
+table { border-collapse: collapse; width:100%; min-width: 420px; }
+th, td { border:1px solid #ddd; padding:8px; text-align:center; }
+th { background:#f0f6f8; }
+caption { font-weight:bold; margin:6px 0 12px; }
+
+/* Kontakt */
+.kontakty, .maps { max-width: 900px; margin: 0 auto; padding:16px; text-align:center; }
+.kontakty a { color:#1d4ed8; }
+.provoz { margin-top:10px; line-height:1.7; }
+
+/* Aktuality */
+.aktuality { max-width:900px; margin:0 auto; padding:16px; text-align:center; }
+.aktualita { margin: 18px auto; background:#e6f4f7; border-radius:10px; padding:14px; max-width: 700px; box-shadow:0 2px 10px rgba(0,0,0,.06); }
+
+/* ===== O NÁS ===== */
+.onas-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Fotky – Kamil a Neptun */
+.onas-fotky {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.onas-fotky img {
+  max-width: 45%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Text */
+.onas-text {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+  text-align: justify;   /* zarovnání do bloku */
+  line-height: 1.8;      /* příjemné čtení */
+  font-size: 18px;
+}
+
+/* Na mobilech */
+@media screen and (max-width: 768px) {
+  .onas-fotky img {
+    max-width: 100%;
+  }
+  .onas-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+/* ===== LÍSTEK ===== */
+
+.content h2 {
+  text-transform: uppercase;
+  color: #2a2a2a;
+  border-bottom: 2px solid #cfcfcf;
+  padding-bottom: 6px;
+  margin-top: 40px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+/* Tabulky */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0 35px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f6f8;
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+}
+
+td {
+  color: #222;
+}
+
+td:last-child, td:nth-last-child(2) {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* Střídání barev řádků */
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Hover efekt – zvýrazní řádek */
+tr:hover {
+  background-color: #f5fbfc;
+  transition: background-color 0.2s ease;
+}
+
+/* Responzivní zobrazení */
+@media screen and (max-width: 768px) {
+  table, th, td {
+    font-size: 15px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 34px; }
+  .menu li { display:block; }
+  .menu a { display:block; border-bottom:1px solid #3b3637; }
+  .onas-fotky { grid-template-columns: 1fr; }
+  .onas-text { text-align: left; font-size: 16px; }
+}
